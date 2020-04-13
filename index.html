@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 <title>Monitoring Coins</title>
- <link rel="icon" href="https://github.com/ketlller/ketlller.github.io/blob/master/favicon.ico" type="image/x-icon" />
- <link rel="shortcut icon" href="https://github.com/ketlller/ketlller.github.io/blob/master/favicon.ico" type="image/x-icon" />	
-<link rel="shortcut icon" type="image/ico" href="https://github.com/ketlller/ketlller.github.io/blob/master/favicon.ico"/>
+ <link rel="icon" href="https://raw.githubusercontent.com/ketlller/ketlller.github.io/master/favicon.ico" type="image/x-icon" />
+ <link rel="shortcut icon" href="https://raw.githubusercontent.com/ketlller/ketlller.github.io/master/favicon.ico" type="image/x-icon" />	
+<link rel="shortcut icon" type="image/ico" href="https://raw.githubusercontent.com/ketlller/ketlller.github.io/master/favicon.ico"/>
 
 	</head>
 
@@ -21,7 +21,7 @@
     float: left;
     width: 33.33%;
     padding: 10px;
-    height: 620px; /* Should be removed. Only for demonstration */
+    height: 920px; /* Should be removed. Only for demonstration */
 }
 /* Clear floats after the columns */
 .row:after {
@@ -31,6 +31,10 @@
 }
 </style>
 
+	
+	 
+	
+	
 <body>  
 	
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
@@ -38,12 +42,22 @@
 $(function() {
    $('.button').on('click', function() {
    });
-   var clc = setInterval( function() { $('.button').click(); }, 60000);
+   var clc = setInterval( function() { $('.button').click(); }, 90000);
 });
 </script>
  
  
-
+<script type="text/javascript">
+ $(document).ready(function(){
+    $("#btn11").on("click","a", function (event) {
+        event.preventDefault();
+        var id  = $(this).attr('href'),
+            top = $(id).offset().top;
+        $('body,html').animate({scrollTop: top}, 1500);
+    });
+});
+</script>
+	
 
 	
 	
@@ -58,25 +72,51 @@ $(function() {
   <div class="text-center">
    <button class='button'>Обновить курс</button> 
   </div>
-  <p>Start мониторинга: <input type="text" id="" value="01.01.2020   12:00"></p>
+	
+ 
+	
+	<a href="#yak1" class="btn11">ТОРГИ</a>
+	
+	
+	
+  <p>Start мониторинга: <input type="text" id="" value="02.02.2020   22:22"></p>
      
+ 	
+	
   <div style="margin-top:-40px;padding-left:900px;">
 <align="center"><p class="updtime"><span></span></p>
 </div>	
 	
 <div class="row">
   <div class="column" style="background-color:#00FFFF;">
-   <div class="text-center"> <a href="https://poloniex.com/exchange#usdt_btc" target="_blank"><h2>poloniex.com</h2></a> 
+  <div class="text-center"> <a href="https://poloniex.com/exchange#usdt_btc" target="_blank"><h2>poloniex.com</h2></a> 
 <!--    <div class="text-center"> <span id="StatusConect_btcalpha">0</span> </div>    //-->
   
      
      
  <!--   <button type='button'>Обновить курс</button>//-->
     
+	 
+	   
+   
+	 
+	
+	   
+ <p><input type="number" id="n1" value="0"> </p>
+  <p><input type="number" id="n2" value="0"> </p>
+<p><input type="number" id="n3" value="0"> </p>
+  <p><input type="number" id="n4" value="0"> </p>
+<p><input type="number" id="n5" value="0"> </p>
+  <p><input type="number" id="n6" value="0"> </p>	   
+ 
+<p id="out1"></p>
+<p id="out2"></p>
+	   
+	
     
    <p>Введите торгову пару: <input type="text" id="new_type1" value="USDT_BTC"></p>  
  <label>---------------------</label>
-
+<div id="yak1"></div>
    <div class="div">
  <b> <span style="color: #008000;">  <div class="sellCOIN_USD">Buy: <span></span></div> </span></b>
     <span style="color: #008000;">  <div class="SellCOIN_USD1">Обьем: <span></span></div>   </span>
@@ -85,6 +125,10 @@ $(function() {
      <span style="color: #FF0000;"><div class="BuyCOIN_USD1">Обьем: <span></span></div> </span>
 </div> 
 
+	   
+     
+	   
+	   
    <b> <br>---------------------</br>
  <!--    <label>---------------------</label>
   <div class="div1">
@@ -111,35 +155,71 @@ $(function() {
   <p> 
  
       <div class="div">
-  <div class="inputdrub1">1 ➤ 2: <span></span>%</div>
-     <div class="SellCOIN_USD1">Обьем: <span></span></div>
+  <div class="inputdrub1">btc-alpha ➤ livecoin: <span></span>%</div>
+  <span style="color: #00BFFF;"> <div class="SellCOIN_USD11">btc-alpha ➤ livecoin: <span></span>%</div> </span>
+  <span style="color: #F78181;"> <div class="SellCOIN_USD111">btc-alpha ➤ livecoin: <span></span>%</div> </span>	      
 </div>  
   	
-   <p>Sound notification  <input type="checkbox" id="btcalphalivecoin_notificator" name="btcalphalivecoin_notificator" checked></p>   
-  </p>  
+
+ <span style="color: #008000;">    
+	 
+	 <p><input type="number" id="min_transactionss1" value="0"> 	   
+<p><input type="checkbox" id="btcalphalivecoin_notificator" name="btcalphalivecoin_notificator" checked></p> 	   
+     
+     </p> </span>
+	
+	
     <span style="color: #008000;"><label>Сработок: </label>  <span id="counter2">0</span> 
        <label>&nbsp&nbsp&nbsp>1.5%:</label> 
 <span id="counterS33">0</span> <label>&nbsp&nbsp&nbsp>2.5%:</label> 
 <span id="counterS333">0</span> <label>&nbsp&nbsp&nbsp>5%:</label> 
 <span id="counterS3333">0</span> <label>&nbsp&nbsp&nbsp>10%:</label> 
 <span id="counterS33333">0</span></span>
-  <br>---------------------</br>
+  <br>---------------------</br> 
+	
     <p> 
        <div class="div">
-  <div class="inputdrub3">1 ➤ 3: <span></span>%</div>
-     <div class="SellCOIN_USD1">Обьем: <span></span></div>
-</div>  
+  <div class="inputdrub3">btc-alpha ➤ hotbit: <span></span>%</div>
+ <span style="color: #00BFFF;"> <div class="BuyCOIN_USD11">btc-alpha ➤ hotbit: <span></span>%</div> </span>
+ <span style="color: #F78181;"> <div class="BuyCOIN_USD111">btc-alpha ➤ hotbit: <span></span>%</div> </span>	       
+</div>  </p>
   	
-   <p>Sound notification  <input type="checkbox" id="btcalphahotbit_notificator" name="btcalphahotbit_notificator" checked></p>   </p> 
+	<div class="min_transa">
+ <span style="color: #008000;"> <p><input type="number" id="min_transactionss2" value="0"> 	   
+	   
+   <p> <input type="checkbox" id="btcalphahotbit_notificator" name="btcalphahotbit_notificator" checked></p>    
+    </div> </p> </span>
+	
+     
+	  
+	  
   <span style="color: #008000;"><label>Сработок: </label>  <span id="counter4">0</span> 
      <label>&nbsp&nbsp&nbsp>1.5%:</label> 
 <span id="counterS55">0</span> <label>&nbsp&nbsp&nbsp>2.5%:</label> 
 <span id="counterS555">0</span> <label>&nbsp&nbsp&nbsp>5%:</label> 
 <span id="counterS5555">0</span> <label>&nbsp&nbsp&nbsp>10%:</label> 
 <span id="counterS55555">0</span></span></b>
-  
+<br>-------------------------------------------------------------------------------</br>   
+
+	<div class="text-center">
+ <span style="color: #008000;"> <p>Buy счита: <input type="number" id="min_transaction11" value=""> 
+	 Обьем: <input type="text" id="min_trans11" value="">    <span id="Status_min_transaction11">---</span>   
+	    
+<span style="color: #008000;"> <p>Sound notification  <input type="checkbox" id="min_transaction11_notificator" name="min_transaction11_notificator" checked></p>  </span>
+		     </div> </p>    </span> 
+ 
+  <div class="text-center">
+<span style="color: #FF0000;"> <p>Sell счита: <input type="number" id="min_transaction22" value=""> 
+Обьем: <input type="text" id="min_trans22" value="">	    <span id="Status_min_transaction22">---</span>
+	
+<span style="color: #FF0000;"> <p>Sound notification  <input type="checkbox" id="min_transaction22_notificator" name="min_transaction22_notificator" checked></p> </span>
+</p> </span>
+</div>
+	
   <br>-------------------------------------------------------------------------------</br>
 
+	 
+	 
 <article>
 
 <b><span style="color: #0000CD;">Инфа по депозитам, Fee, .. : </span></b>
@@ -163,7 +243,9 @@ $(function() {
 <br>Сумма вывода больше  5 USDT и меньше чем 1000000 USDT, 5000 USD за 24 часов.</br>
 
 <br>После депозита USDT, обмен сделать на USD потом на PZM (  USDT =>> USD =>> PZM  )</br>
-
+<br>Вывод USDT Tether ERC20  btc-alpha =>> hotbit  30 подтв</br>
+<br>Вывод PZM btc-alpha =>> livecoin 20 подтв   20 мин</br>
+<br>Депозит USDT Tether Omni  с обменника =>> btc-alpha  3 подтв 30 мин</br>
 </article> 
  <br>-------------------------------------------------------------------------------</br> 
 </div>
@@ -172,7 +254,7 @@ $(function() {
   
   
   <div class="column" style="background-color:#98FB98;">
-    <div class="text-center"><a href="https://hitbtc.com/exchange/BTC-to-USDT" target="_blank"><h2>hitbtc.com</h2></a>
+   <div class="text-center"><a href="https://hitbtc.com/exchange/BTC-to-USDT" target="_blank"><h2>hitbtc.com</h2></a>
    <!--     <div class="text-center"> <span id="StatusConect_livecoin">0</span> </div>    //-->  
   
  <p>Введите торгову пару: <input type="text" id="new_type2" value="BTCUSD"></p>
@@ -190,11 +272,22 @@ $(function() {
  <b>    <br>---------------------</br>
     <p>
        <div class="div">
-  <div class="inputdrub2">2 ➤ 1: <span></span>%</div>
-     <div class="SellCOIN_USD_livecoin1">Обьем: <span></span></div>
-</div>  
+  <div class="inputdrub2">livecoin ➤ btc-alpha: <span></span>%</div>
+   <span style="color: #00BFFF;"> <div class="SellCOIN_USD_livecoin11">livecoin ➤ btc-alpha: <span></span>%</div> </span>
+   <span style="color: #F78181;"> <div class="SellCOIN_USD_livecoin111">livecoin ➤ btc-alpha: <span></span>%</div> </span>
+  </div>  
   </p>	
-    <p>Sound notification  <input type="checkbox" id="livecoinbtcalpha_notificator" name="livecoinbtcalpha_notificator" checked></p>
+	  
+<div class="text-center">
+ <span style="color: #008000;"> <p><input type="number" id="min_transactionss3" value="0"> 	   
+	   
+   <p><input type="checkbox" id="livecoinbtcalpha_notificator" name="livecoinbtcalpha_notificator" checked></p>    
+    </div> </p> </span>	  
+	  
+    
+	  
+	  
+	  
 <b><span style="color: #008000;"><label>Сработок: </label>  <span id="counter">0</span>
    <label>&nbsp&nbsp&nbsp>1.5%:</label> 
 <span id="counterS11">0</span> <label>&nbsp&nbsp&nbsp>2.5%:</label> 
@@ -204,11 +297,22 @@ $(function() {
 <br>---------------------</br>
     <p>
        <div class="div">
-  <div class="inputdrub6">2 ➤ 3: <span></span>%</div>
-     <div class="SellCOIN_USD_livecoin1">Обьем: <span></span></div>
+  <div class="inputdrub6">livecoin ➤ hotbit: <span></span>%</div>
+  <span style="color: #00BFFF;"> <div class="BuyCOIN_USD_livecoin11">livecoin ➤ hotbit: <span></span>%</div> </span> 
+  <span style="color: #F78181;"> <div class="BuyCOIN_USD_livecoin111">livecoin ➤ hotbit: <span></span>%</div> </span>	       
 </div>  
   </p>	
-    <p>Sound notification  <input type="checkbox" id="livecoinhotbit_notificator" name="livecoinhotbit_notificator" checked></p> 
+
+<div class="text-center">
+ <span style="color: #008000;"> <p><input type="number" id="min_transactionss4" value="0"> 	   
+	   
+   <p><input type="checkbox" id="livecoinhotbit_notificator" name="livecoinhotbit_notificator" checked></p>    
+    </div> </p> </span>	
+
+  
+
+
+
 <b><span style="color: #008000;"><label>Сработок: </label>  <span id="counter1">0</span> 
   
    <label>&nbsp&nbsp&nbsp>1.5%:</label> 
@@ -216,14 +320,22 @@ $(function() {
 <span id="counterS222">0</span> <label>&nbsp&nbsp&nbsp>5%:</label> 
 <span id="counterS2222">0</span> <label>&nbsp&nbsp&nbsp>10%:</label> 
 <span id="counterS22222">0</span> </span></b>
-  
-  
+ </b>
+<br>-------------------------------------------------------------------------------</br>
 
+<div class="text-center">
+<span style="color: #008000;"> <p>Buy счита: <input type="number" id="min_transaction33" value="">
+Обьем: <input type="text" id="min_trans11" value="">    <span id="Status_min_transaction33">---</span> 	
  
+<span style="color: #008000;"> <p>Sound notification  <input type="checkbox" id="min_transaction33_notificator" name="min_transaction33_notificator" checked></p> </span>
+  </div> </p>    </span> 
+ <div class="text-center">
+<span style="color: #FF0000;"> <p>Sell счита: <input type="number" id="min_transaction44" value="">
+	Обьем: <input type="text" id="min_trans22" value="">    <span id="Status_min_transaction44">---</span> 
+ 
+<span style="color: #FF0000;"> <p>Sound notification  <input type="checkbox" id="min_transaction44_notificator" name="min_transaction44_notificator" checked></p> </span>
+ </div> </p>    </span> 
 
-
-
-</b>
 <br>-------------------------------------------------------------------------------</br>
 <article>
 	<b><span style="color: #0000CD;">Инфа по депозитам, Fee, .. : </span></b>
@@ -242,12 +354,11 @@ $(function() {
 <br>Комиссия вывода: 0.8 USDT</br>
 <br>29 подтверждений</br>
 
-
-<br>Вывод USDT на btc-alpha.com - норм</br>
-<br>Вывод PZM на   hotbit.io  - норм</br>
-
 <br>После депозита USDT, обмен сделать на USD потом на PZM (  USDT =>> USD =>> PZM  )</br>
-<br>Вывод PZM только через личный кошелек  - норм</br>
+<br>Депозит PZM с мого PZM-кошелька  =>> livecoin 21 подтв  23 мин</br>
+<br>Вывод USDT Tether ERC20 на =>> btc-alpha.com - норм</br>
+<br>Вывод PZM на =>> hotbit.io  - норм</br>
+<br>Вывод на биржи PZM только через личный кошелек  - норм</br>
 </article>
 <br>-------------------------------------------------------------------------------</br>
      </div>
@@ -263,29 +374,31 @@ $(function() {
      
 <p>Введите торгову пару: <input type="text" id="new_type3" value="USDT-BTC"><!--<input type="text" id="new_type4" value="PZM/USDT">//--></p>  
     <label>---------------------</label>
-	   
-	   
   <div class="div">
-<b><span style="color: #008000;"><div class="buyCOIN_USD_hotbit">Buy: <span></span></div> </span></b>
-     <b><span style="color: #008000;"><div class="BuyCOIN_USD_hotbit1">Обьем: <span></span></div> </span> 	  
-    
+  <b><span style="color: #008000;"><div class="buyCOIN_USD_hotbit">Buy: <span></span></div> </span></b>
+     <b><span style="color: #008000;"><div class="BuyCOIN_USD_hotbit1">Обьем: <span></span></div> </span> 
     <label>---------------------</label>
-	     
-
  <b><span style="color: #FF0000;"> <div class="sellCOIN_USD_hotbit">Sell: <span></span></div> </span></b>
-   <b><span style="color: #FF0000;"> <div class="SellCOIN_USD_hotbit1">Обьем: <span></span></div> </span> </b>	  
+   <b><span style="color: #FF0000;"> <div class="SellCOIN_USD_hotbit1">Обьем: <span></span></div> </span> </b>
   </div>
-
-	  
    <b><br>---------------------</br>
     <p>
        <div class="div">
        
-  <div class="inputdrub4">3 ➤ 1: <span></span>%</div>
-     <div class="1SellCOIN_USD_livecoin1">Обьем: <span></span></div>
+  <div class="inputdrub4">hotbit ➤ btc-alpha: <span></span>%</div>
+  <span style="color: #00BFFF;"> <div class="SellCOIN_USD_hotbit11">hotbit ➤ btc-alpha: <span></span>%</div> </span> 
+  <span style="color: #F78181;"> <div class="SellCOIN_USD_hotbit111">hotbit ➤ btc-alpha: <span></span>%</div> </span> 	    
 </div>  
   </p>	
-    <p>Sound notification  <input type="checkbox" id="hotbitbtcalpha_notificator" name="hotbitbtcalpha_notificator" checked></p>
+	   
+<div class="text-center">
+ <span style="color: #008000;"> <p><input type="number" id="min_transactionss5" value="0"> 	   
+	   
+   <p><input type="checkbox" id="hotbitbtcalpha_notificator" name="hotbitbtcalpha_notificator" checked></p>   
+    </div> </p> </span>	   
+    
+	   
+	   
 <b><span style="color: #008000;"><label>Сработок: </label>  <span id="counter5">0</span> 
    <label>&nbsp&nbsp&nbsp>1.5%:</label> 
 <span id="counterS66">0</span> <label>&nbsp&nbsp&nbsp>2.5%:</label> 
@@ -296,17 +409,43 @@ $(function() {
     <p>
        <div class="div">
       
-  <div class="inputdrub5">3 ➤ 2: <span></span>%</div>
-     <div class="1SellCOIN_USD_livecoin1">Обьем: <span></span></div>
+  <div class="inputdrub5">hotbit ➤ livecoin: <span></span>%</div>
+  <span style="color: #00BFFF;"> <div class="BuyCOIN_USD_hotbit11">hotbit ➤ livecoin: <span></span>%</div> </span>
+  <span style="color: #F78181;"> <div class="BuyCOIN_USD_hotbit111">hotbit ➤ livecoin: <span></span>%</div> </span>	      
 </div>  
   </p>	
-    <p>Sound notification  <input type="checkbox" id="hotbitlivecoin_notificator" name="hotbitlivecoin_notificator" checked></p>
+
+<div class="text-center">
+ <span style="color: #008000;"> <p><input type="number" id="min_transactionss6" value="0"> 	   
+	   
+   <p><input type="checkbox" id="hotbitlivecoin_notificator" name="hotbitlivecoin_notificator" checked></p>  
+    </div> </p> </span>
+    
+
+
   </b>
 <b><span style="color: #008000;"><label>Сработок: </label>  <span id="counter3">0</span>  <label>&nbsp&nbsp&nbsp>1.5%:</label> 
 <span id="counterS44">0</span> <label>&nbsp&nbsp&nbsp>2.5%:</label> 
 <span id="counterS444">0</span> <label>&nbsp&nbsp&nbsp>5%:</label> 
 <span id="counterS4444">0</span> <label>&nbsp&nbsp&nbsp>10%:</label> 
 <span id="counterS44444">0</span></span></b>
+<br>-------------------------------------------------------------------------------</br>
+
+ 
+
+ <div class="text-center">
+<span style="color: #008000;"> <p>Buy счита: <input type="number" id="min_transaction55" value="">
+Обьем: <input type="text" id="min_trans11" value="">    <span id="Status_min_transaction55">---</span> 	
+
+<span style="color: #008000;"> <p>Sound notification  <input type="checkbox" id="min_transaction55_notificator" name="min_transaction55_notificator" checked></p> </span>
+  </div> </p>    </span> 
+  <div class="text-center">
+<span style="color: #FF0000;"> <p>Sell счита: <input type="number" id="min_transaction66" value=""> 
+Обьем: <input type="text" id="min_trans22" value="">    <span id="Status_min_transaction66">---</span> 	
+
+<span style="color: #FF0000;"> <p>Sound notification  <input type="checkbox" id="min_transaction66_notificator" name="min_transaction66_notificator" checked></p> </span>
+  </div> </p>    </span> 
+
 <br>-------------------------------------------------------------------------------</br>
 	 
 <article>	
@@ -321,14 +460,14 @@ $(function() {
 
 
 
- <b><br>USDT Адрес депозита: 0x5af3d12803897c8bc01d53faa63122f12ccd4c1b</br></b>
- <br>Минимальная сумма вывода: 20 USDT</p>
- <br>Комиссия вывода: 2 USDT</p>
- <br>Токены USDT приносят в год начисления 3,71% POS майнинг)</br>
+ <b><br>USDT Tether ERC20 Адрес депозита: 0x5af3d12803897c8bc01d53faa63122f12ccd4c1b</br></b>
+ <br>Минимальная сумма вывода: 20 USDT ERC20</p>
+ <br>Комиссия вывода: 2 USDT ERC20</p>
  <br>После депозита USDT, обмен прямой  USDT =>> PZM</br>
 
- <br>Вывод USDT на btc-alpha.com 14-26 мин  или 55-114 Block Confirmations - норм</br>
- <br>Вывод PZM с hotbit.io только через личный кошелек  - норм </br>
+ <br>Вывод USDT Tether ERC20 hotbit =>> btc-alpha 14-26 мин (55-114 Confirmations) - норм</br>
+ <br>Вывод мгновенно PZM с hotbit.io только через личный кошелек  - норм </br>
+
 </article>
 <br>-------------------------------------------------------------------------------</br>
 </div>  
